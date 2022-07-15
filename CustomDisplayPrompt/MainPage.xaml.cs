@@ -14,5 +14,10 @@ namespace CustomDisplayPrompt
         {
             InitializeComponent();
         }
+
+        private async void CustomDisplayPrompt_EnterClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Hi", "HI", "Ok");
+        }
     }
 }
