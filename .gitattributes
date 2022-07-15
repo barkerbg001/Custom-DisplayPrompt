@@ -1,0 +1,11 @@
+*text=auto
+*.jpg binary
+*.png binary
+*.cs text diff=csharp
+*.xaml text
+
+
+
+
+
+
