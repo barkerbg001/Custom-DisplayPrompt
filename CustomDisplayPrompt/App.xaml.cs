@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Custom_DisplayPrompt
+namespace CustomDisplayPrompt
 {
     public partial class App : Application
     {

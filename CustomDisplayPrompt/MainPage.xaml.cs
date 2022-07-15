@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Custom_DisplayPrompt
+namespace CustomDisplayPrompt
 {
     public partial class MainPage : ContentPage
     {

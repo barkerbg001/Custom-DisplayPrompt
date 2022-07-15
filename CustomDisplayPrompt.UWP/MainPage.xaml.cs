@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Custom_DisplayPrompt.UWP
+namespace CustomDisplayPrompt.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace Custom_DisplayPrompt.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Custom_DisplayPrompt.App());
+            LoadApplication(new CustomDisplayPrompt.App());
         }
     }
 }

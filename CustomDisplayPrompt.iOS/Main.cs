@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Custom_DisplayPrompt.iOS
+namespace CustomDisplayPrompt.iOS
 {
     public class Application
     {

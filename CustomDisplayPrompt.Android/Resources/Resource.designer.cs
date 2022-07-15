@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Custom_DisplayPrompt.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("CustomDisplayPrompt.Droid.Resource", IsApplication=true)]
 
-namespace Custom_DisplayPrompt.Droid
+namespace CustomDisplayPrompt.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace Custom_DisplayPrompt.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Custom_DisplayPrompt.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::CustomDisplayPrompt.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
