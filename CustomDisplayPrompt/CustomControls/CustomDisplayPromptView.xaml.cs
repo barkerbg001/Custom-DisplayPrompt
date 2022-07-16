@@ -29,6 +29,15 @@ namespace CustomDisplayPrompt.CustomControls
 
             lblSelectedField.Text = title;
             edtInput.Text = text;
+
+            var gt = new TapGestureRecognizer();
+            gt.Tapped += Gt_Tapped;
+            Back.GestureRecognizers.Add(gt);
+        }
+
+        private void Gt_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
         }
 
         private void CustomDisplayPromptView_LayoutChanged(object sender, EventArgs e)
@@ -56,11 +65,6 @@ namespace CustomDisplayPrompt.CustomControls
             }
 
             AbsoluteLayout.SetLayoutFlags(Main, AbsoluteLayoutFlags.All);
-        }
-
-        private void BtnCancel_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PopModalAsync();
         }
 
         private async void BtnSave_Clicked(object sender, EventArgs e)

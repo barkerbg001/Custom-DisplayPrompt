@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace CustomDisplayPrompt.CustomControls
 {
-    public class CustomDisplayPrompt : CustomLabel
+    public class CustomDisplayPrompt : Button
     {
         public CustomDisplayPrompt()
         {
@@ -15,7 +15,12 @@ namespace CustomDisplayPrompt.CustomControls
             {
                 Text = value;
             });
-            this.Tapped += CustomDisplayPrompt_Tapped;
+            this.Clicked += CustomDisplayPrompt_Clicked;
+        }
+
+        private async void CustomDisplayPrompt_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new CustomDisplayPromptView(this, this.Id.ToString(), Title, Text, EnterClicked));
         }
 
         public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(String), typeof(CustomDisplayPrompt), "Type a Value", BindingMode.TwoWay);
@@ -25,13 +30,6 @@ namespace CustomDisplayPrompt.CustomControls
             set => SetValue(TitleProperty, value);
         }
 
-        private readonly object _tappedEventPadlock = new object();
-
         public event EventHandler EnterClicked;
-
-        private async void CustomDisplayPrompt_Tapped(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new CustomDisplayPromptView(this, this.Id.ToString(), Title, Text, EnterClicked));
-        }
     }
 }

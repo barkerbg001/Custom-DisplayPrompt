@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:CustomControls="clr-namespace:CustomDisplayPrompt.CustomControls" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustomDisplayPrompt.CustomControls.CustomDisplayPromptView"
              BackgroundColor="Transparent">
     <ContentPage.Content>
         <AbsoluteLayout>
-            <CustomControls:CustomStackLayout BackgroundColor="DimGray" Opacity="0.5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Tapped="BtnCancel_Clicked" />
+            <StackLayout x:Name="Back" BackgroundColor="DimGray" Opacity="0.5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />
             <Frame x:Name="Main" HasShadow="True" CornerRadius="20" AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <Label x:Name="lblSelectedField" Text="" WidthRequest="200" FontSize="15" HeightRequest="25" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+                    <Label x:Name="lblSelectedField" Text="" TextColor="#323232" WidthRequest="200" FontSize="15" HeightRequest="25" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
                     <Editor x:Name="edtInput" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
                     <StackLayout VerticalOptions="End" Orientation="Horizontal">
-                        <Button Text="Cancel" x:Name="BtnCancel" Clicked="BtnCancel_Clicked" BackgroundColor="White" TextColor="#FF8112" BorderColor="#FF8112" CornerRadius="10" HorizontalOptions="StartAndExpand" WidthRequest="100" Padding="-2" Margin="20" HeightRequest="30" VerticalOptions="End" />
+                        <Button Text="Cancel" x:Name="BtnCancel" Clicked="Gt_Tapped" BackgroundColor="White" TextColor="#FF8112" BorderColor="#FF8112" CornerRadius="10" HorizontalOptions="StartAndExpand" WidthRequest="100" Padding="-2" Margin="20" HeightRequest="30" VerticalOptions="End" />
                         <Button Text="Save" x:Name="BtnSave" Clicked="BtnSave_Clicked" BackgroundColor="#239d60" TextColor="White" BorderColor="#239d60" CornerRadius="10" HorizontalOptions="EndAndExpand" WidthRequest="100" Padding="-2" Margin="20" HeightRequest="30" VerticalOptions="End" />
                     </StackLayout>
                 </StackLayout>
